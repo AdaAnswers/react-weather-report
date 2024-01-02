@@ -26,7 +26,7 @@ const kFallbackTempRange = 'cool';
 // it the value it needs to carry out its task (the temperature) which
 // gives us greater flexibility in where we place this logic. We could actually
 // move this logic (and the range data) out of this file entirely! We would
-// just need to export this function and kDefaultTemperature for the use of
+// just need to export this function and kDefaultTemperature for use in
 // the component.
 const calculateTempRange = (temperature) => {
   // use list destructuring to get the two values in each range record
@@ -60,7 +60,7 @@ const Temperature = () => {
     // get used to it.
     setTemperature(temperature => temperature + amount);  // B
 
-    // due to simplicity of this application, there would essentially be
+    // due to the simplicity of this application, there would essentially be
     // no difference if we used the value-passing style of calling the setter
     // setTemperature(temperature + amount);
     // In this case, temperature IS the local variable read from the piece of
