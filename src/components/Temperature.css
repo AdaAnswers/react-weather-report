@@ -1,0 +1,32 @@
+/*
+CSS imports all end up being merged into one CSS file for the project, making
+it easy for styles to affect unintended markup. By writing the selector so that
+it applies only to a child of .Temperature, we ensure that these rules wouldn't
+apply to unrelated markup that happened to use the same class names.
+
+This provides one way to "scope" our style rules.
+
+For a refresher about how the child element selector behaves, refer to:
+https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator
+*/
+
+/* scoped classes to apply to children of a Temperature element */
+.Temperature > .very-hot {
+    color: red;
+}
+
+.Temperature > .hot {
+    color: orange;
+}
+
+.Temperature > .warm {
+    color: gold;  /* gold since yellow is hard to read on light background */
+}
+
+.Temperature > .mild {
+    color: green;
+}
+
+.Temperature > .cool {
+    color: teal;
+}
