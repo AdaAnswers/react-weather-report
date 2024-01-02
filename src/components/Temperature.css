@@ -6,6 +6,9 @@ it applies only to a child of .Temperature, we ensure that these rules wouldn't
 apply to unrelated markup that happened to use the same class names.
 
 This provides one way to "scope" our style rules.
+
+For a refresher about how the child element selector behaves, refer to:
+https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator
 */
 
 .Temperature > .very-hot {

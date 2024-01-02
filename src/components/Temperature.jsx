@@ -45,19 +45,20 @@ const calculateTempRange = (temperature) => {
 // the start of our Temperature component
 const Temperature = () => {
   // piece of state to track the current temperature
-  const [temperature, setTemperature] = useState(kDefaultTemperature);
+  const [temperature, setTemperature] = useState(kDefaultTemperature);  // A
 
   // function to change the temperature by some amount (up or down)
   const changeTemp = amount => {
     // uses the setter for temperature using function-passing style.
-    // note the name temperature here is NOT the piece of state variable.
+    // NOTE: the name temperature on the line marked B below is NOT the
+    // piece of state variable from the line marked A above.
     // it is the parameter to the anonymous function.
     // it will receive the current value of the piece of state associated
     // with the setter (temperature) and return the new value to use.
     // it is common to use the name we chose for the piece of state as
     // the function parameter, though this can be confusing until we
     // get used to it.
-    setTemperature(temperature => temperature + amount);
+    setTemperature(temperature => temperature + amount);  // B
 
     // due to simplicity of this application, there would essentially be
     // no difference if we used the value-passing style of calling the setter
